@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div ng-repeat="rec in recipes | orderBy:'name' | filter: recipeName">
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{rec.name}}
+                    <img src="img/hot.png" style="height:50px;float:right;">
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="#" class="thumbnail">
+                                <img src="img/{{rec.img}}">
+                            </a>
+                        </div>
+                        <div class="col-xs-8">
+                            <span class="label label-primary">{{rec.dLvl}}</span>
+                            <span class="label label-warning">
+                                <img src="img/chili.png" style="height:20px;" ng-repeat="r in range(rec.spicy)" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
